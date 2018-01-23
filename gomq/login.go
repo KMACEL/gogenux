@@ -13,7 +13,7 @@ type Login struct {
 
 // Connect is
 func Connect(l Login) MQTT.Client {
-	opts := MQTT.NewClientOptions().AddBroker("ssl://mqtt.ardich.com:8883")
+	opts := MQTT.NewClientOptions().AddBroker(broker)
 	opts.SetClientID(l.SetClientID)
 	opts.SetUsername(l.SetUsername)
 	opts.SetPassword(l.SetPassword)
